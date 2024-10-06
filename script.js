@@ -24,3 +24,21 @@ function getRandomQuote() {
 }
 
 getRandomQuote();
+
+// In script.js
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  if (nameInput.value === '' || emailInput.value === '' || messageInput.value === '') {
+    alert('Please fill in all required fields.');
+  } else {
+    // Submit the form data (e.g., using AJAX)
+    console.log('Form submitted successfully!');
+  }
+});
